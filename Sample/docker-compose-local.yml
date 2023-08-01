@@ -1,0 +1,13 @@
+version: "3.4"
+
+services:
+  postgres:
+    container_name: postgres_dev
+    image: postgres
+    environment:
+      POSTGRES_USER: devuser
+      POSTGRES_PASSWORD: password
+      PGDATA: /data/postgres
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
